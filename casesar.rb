@@ -31,7 +31,7 @@ end
 #asks user for a string and a key
 puts "Okay give me a string to encode!"
 string = gets.chomp
-puts "Now give me an integer!"
+puts "Now give me an integer for a key!"
 key = gets.chomp
 key = key.to_i
 puts caesar(string, key)

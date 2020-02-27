@@ -11,8 +11,5 @@ def substrings (string, dictionary)
     return frequency
 end
 
-
-dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit",
-    "below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
-
+dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 puts substrings("below the big horn in the partner", dictionary)

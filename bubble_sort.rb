@@ -15,4 +15,4 @@ return arr
 end
 
 arr = [23,54,87,32,12,1,23,2,77,43,21,1,2,3,4,5,6,7,8,9,50]
-puts bubble(arr)
+print bubble(arr)
