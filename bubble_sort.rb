@@ -4,9 +4,7 @@ def bubble (arr)
         unsorted = false
         for a in 0...arr.length - 1
             if arr[a] > arr[a + 1]
-                temp = arr[a]
-                arr[a] = arr[a+1]
-                arr[a+1] = temp
+                arr[a], arr[a+1] = arr[a+1], arr[a]
                 unsorted = true
             end 
         end

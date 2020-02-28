@@ -5,9 +5,7 @@ def bubble_sort_by (arr)
         for a in 0...arr.length - 1
             result = yield(arr[a], arr[a + 1])
             if result > 0
-                temp = arr[a]
-                arr[a] = arr[a+1]
-                arr[a+1] = temp
+                arr[a], arr[a+1] = arr[a+1], arr[a]
                 unsorted = true
             end
         end
