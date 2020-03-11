@@ -1,5 +1,5 @@
-def caesar(string, key)
-    converted = ""
+def encode(string, key)
+converted = ""
     string.each_byte do |c|
         if c >= 97 && c <= 122
             c = c - 97 + key
@@ -23,18 +23,14 @@ def caesar(string, key)
                 c += 65
             end
             converted << c.chr
+        else
+            converted << c
         end
     end 
     return converted
 end
 
-#asks user for a string and a key
-puts "Okay give me a string to encode!"
-string = gets.chomp
-puts "Now give me an integer for a key!"
-key = gets.chomp
-key = key.to_i
-puts caesar(string, key)
+p encode("Kenneth", 7)
     
 
 
