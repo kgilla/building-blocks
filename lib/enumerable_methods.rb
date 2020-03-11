@@ -55,10 +55,14 @@ module Enumerable
         return true
     end
 
-    def my_count
+    def my_count ()
         counter = 0
         self.my_each do |a|
-            if yield(a) == true
+            if block_given?
+                if yield(a) == true
+                    counter+=1
+                end
+            else
                 counter+=1
             end
         end
@@ -88,9 +92,9 @@ module Enumerable
 end
 
 
-array = [5,4,3,5,8,4,3,5,6,1,3,3,5,65,7,8]
+# array = [5,4,3,5,8,4,3,5,6,1,3,3,5,65,7,8]
 
-by_10 = Proc.new { |a| a + 10 }
+# by_10 = Proc.new { |a| a + 10 }
 
-puts array.my_map(by_10) { |a| a + 100 }
+# puts array.my_map(by_10) { |a| a + 100 }
 
